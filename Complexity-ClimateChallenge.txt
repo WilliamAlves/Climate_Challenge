@@ -1,0 +1,20 @@
+*** Qual a complexidade O() do algoritimo?
+	- O(n). As funcoes Max e Min tem complexidade O(log n), enquanto checkBST_Aux
+	recursivamente atua sobre todos os elementos da entrada, para verificar se 
+	os valores estao no intervalo correto para a arvore ser binaria de busca - ou seja,
+	tem	complexidade linear. Logo, O(2 log n + n) -> O(n).
+
+*** Eh possivel melhorar o algoritimo? Se sim, qual a nova complexidade?
+	- Sim. Como o problema nos diz que a entrada esta entre 0 e 1000, poderiamos definir
+	esses valores como o minimo e maximo na primira chamada de CheckBST_Aux e eliminar
+	as funcoes Min e Max, reduzindo o numero de operacoes. Porem, como o gargalo de 
+	complexidade esta em checkBST_AUX (para afirmarmos que a arvore eh ou nao BST 
+	temos que verificar todos os valores), a complexidade seguiria sendo O(n).
+
+
+*** Qual a classe de complexidade do algoritimo?
+	- P (tempo e espaco), pois trata-se de um simples algoritimo de decisao
+	("a arvore eh BST? sim ou nao?") cuja solucao eh dada em tempo linear,
+	consumindo no pior caso (onde a arvore eh totalmente desbalanceada)
+	espaco (devido a pilha de memoria, por causa da recursao) igual a N.
+
